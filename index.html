@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <script>
+        $(function(){
+            $('header .inner .pc .gnb .depth01 > a').mouseenter(function(){
+                $('header .inner .pc .gnb .depth02').stop().slideUp()
+                $(this).next().stop().slideDown()
+            })
+            $('header .inner .pc .gnb .depth01').mouseleave(function(){
+                $('header .inner .pc .gnb .depth02').stop().slideUp()
+            })
+            $('.menu_open').click(function(){
+                $('.mobile_gnb').animate({
+                   right : '0'
+                })
+                    
+                })
+            $('.menu_close').click(function(){
+                $('.mobile_gnb').animate({
+                   right : '-100%'
+                })
+                })
+
+               $('.mobile_gnb .gnb .depth01 > a').click(function(){
+                $('.mobile_gnb .gnb .depth02').stop().slideUp()
+                $(this).next().stop().slideToggle()
+               })
+
+               $('.best .best_menu li').click(function(){
+                $('.best .best_menu li').removeClass('on')
+                   $(this).addClass('on')
+
+                   $('.best .list').removeClass('on')
+                   $('.best .list').eq($(this).index()).addClass('on')
+               })
+            
+            
+            
+            
+            
+            })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="inner">
+                <h1>
+                    <a href="#"><img src="img/마녀공장/마녀공장로고.svg" alt=""></a>
+                </h1>
+
+                <nav class="pc">
+                    <ul class="gnb">
+                        <li class="depth01">
+                            <a href="#">전체</a>
+                            <ul class="depth02">
+                                <li><a href="#">클렌징</a></li>
+                                <li><a href="#">스킨,토너,미스트</a></li>
+                                <li><a href="#">앰플,에센스</a></li>
+                                <li><a href="#">로션,크림,아이크림</a></li>
+                                <li><a href="#">선케어</a></li>
+                                <li><a href="#">마스크,팩</a></li>
+                                <li><a href="#">헤어,바디</a></li>
+                                <li><a href="#">립,핸드</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                        <li class="depth01"> <a href="#">이벤트</a></li>
+                        <li class="depth01">
+                            <a href="#">베스트</a>
+                            <ul class="depth02">
+                                <li><a href="#">피부 타입별</a></li>
+                                <li><a href="#">카테고리별</a></li>
+                                <li><a href="#">라인별</a></li>
+                                <li><a href="#">브랜드별</a></li>
+                                <li><a href="#">신상품</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                        <li class="depth01">
+                            <a href="#">특가</a>
+                            <ul class="depth02">
+                                <li><a href="#">피부타입별</a></li>
+                                <li><a href="#">카테고리별</a></li>
+                                <li><a href="#">라인별</a></li>
+                                <li><a href="#">브랜드별</a></li>
+                                <li><a href="#">신상품</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                        <li class="depth01">
+                            <a href="#">브랜드</a>
+                            <ul class="depth02">
+                                <li><a href="#">브랜드스토리</a></li>
+                                <li><a href="#">성분철학</a></li>
+                                <li><a href="#">사회공헌</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                    </ul><!-- gnb end -->
+                </nav><!-- pc end -->
+                <div class="mobile menu_open">
+                    <img src="img/마녀공장/menu.png" alt="">
+                </div><!-- menu_open end -->
+                <nav class="mobile mobile_gnb">
+                    <div class="menu_close">
+                        <p>메뉴닫기</p>
+                    </div><!-- menu_close -->
+    
+                    <ul class="gnb">
+                        <li class="depth01">
+                            <a href="#">전체</a>
+                            <ul class="depth02">
+                                <li><a href="#">클렌징</a></li>
+                                <li><a href="#">스킨,토너,미스트</a></li>
+                                <li><a href="#">앰플,에센스</a></li>
+                                <li><a href="#">로션,크림,아이크림</a></li>
+                                <li><a href="#">선케어</a></li>
+                                <li><a href="#">마스크,팩</a></li>
+                                <li><a href="#">헤어,바디</a></li>
+                                <li><a href="#">립,핸드</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                        <li class="depth01"> <a href="#">이벤트</a></li>
+                        <li class="depth01">
+                            <a href="#">베스트</a>
+                            <ul class="depth02">
+                                <li><a href="#">피부타입별</a></li>
+                                <li><a href="#">카테고리별</a></li>
+                                <li><a href="#">라인별</a></li>
+                                <li><a href="#">브랜드별</a></li>
+                                <li><a href="#">신상품</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                        <li class="depth01">
+                            <a href="#">특가</a>
+                            <ul class="depth02">
+                                <li><a href="#">피부타입별</a></li>
+                                <li><a href="#">카테고리별</a></li>
+                                <li><a href="#">라인별</a></li>
+                                <li><a href="#">브랜드별</a></li>
+                                <li><a href="#">신상품</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                        <li class="depth01">
+                            <a href="#">브랜드</a>
+                            <ul class="depth02">
+                                <li><a href="#">브랜드스토리</a></li>
+                                <li><a href="#">성분철학</a></li>
+                                <li><a href="#">사회공헌</a></li>
+                            </ul><!-- depth02 end -->
+                        </li><!-- depth01 end -->
+                    </ul><!-- gnb end -->
+                </nav><!-- mobile end -->
+            </div><!-- inner end -->
+
+
+
+        </header>
+
+        <main>
+            <section class="main_visual">
+                <img src="img/마녀공장/41ebcd316056617b4e4796d8183e5170_87822.jpg" alt="">
+                <div>
+                    <h2>히더 진정 라인 런칭 기념<br>
+                        Special Week</h2>
+                    <p>딱 일주일만, 최대 70% 할인 쿠폰 증정</p>
+                    <span>2023.04.07 am 10:00 - 04.14 am 10:00</span>
+                    <a href="#">자세히보기</a>
+                </div>
+            </section><!-- main_visual end -->
+
+            <section class="best">
+                <div class="inner">
+                    <div class="title">
+                        <a href="#">전체보기</a>
+                        <h3>best sellers :</h3>
+                    </div><!-- title end -->
+                    <ul class="best_menu">
+                        <li class="on">전체</li>
+                        <li>클렌징</li>
+                        <li>스킨 토너 미스트</li>
+                        <li>앰플 에센스 오일</li>
+                        <li>로션 크림 아이크림</li>
+                        <li>마스크 팩</li>
+                        <li>헤어 바디</li>
+                    </ul><!-- best_menu end -->
+
+                    <div class="list on">
+                        <div class="item">
+                            <a href="sub/best.html">
+                                <img src="img/마녀공장/1512_main_028.png" alt="">
+                                <div class="text">
+                                    <h4>[대용량] 퓨어 클렌징 오일 400ml</h4>
+                                    <div>
+                                        <p>49,000원</p>
+                                        <strong>21,990원<span>55%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/1650_main_019.jpg" alt="">
+                                <div class="text">
+                                    <h4>갈락토미 나이아신 에센스 50ml+12ml</h4>
+                                    <div>
+                                        <p>29,000원</p>
+                                        <strong>
+                                            17,400원<span>40%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/830_main_054.png" alt="">
+                                <div class="text">
+                                    <h4>[기획세트] 퓨어&딥 클렌징 폼 100mlX3</h4>
+                                    <div>
+                                        <p>42,000원</p>
+                                        <strong>17,090원<span>59%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/1709_main_058.jpg" alt="">
+                                <div class="text">
+                                    <h4>비피다 바이옴 콤플렉스 앰플 50ml</h4>
+                                    <div>
+                                        <p>35,000원</p>
+                                        <strong>21,000원<span>40%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+
+                    </div><!-- list end -->
+                    <div class="list">
+                        <div class="item">
+                            <a href="sub/best.html">
+                                <img src="img/마녀공장/cleansing1.png" alt="">
+                                <div class="text">
+                                    <h4>아워 비건 어성초 시카 클렌징폼 120ml</h4>
+                                    <div>
+                                        <p>16,000원</p>
+                                        <strong>14,400원<span>10%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/cleansing2.png" alt="">
+                                <div class="text">
+                                    <h4>[기획세트] 퓨어 클렌징 세트 (퓨어 클렌징 오일 400ml+퓨어&딥 클렌징 폼 200ml)</h4>
+                                    <div>
+                                        <p>67,000원</p>
+                                        <strong>
+                                            52,260원<span>22%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/cleansing4.png" alt="">
+                                <div class="text">
+                                    <h4>갈락토미 엔자임 필링젤 75ml</h4>
+                                    <div>
+                                        <p>12,000원</p>
+                                        <strong>6,060원<span>50%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/830_main_054.png" alt="">
+                                <div class="text">
+                                    <h4>[기획세트] 퓨어&딥 클렌징 폼 100mlX3</h4>
+                                    <div>
+                                        <p>42,000원</p>
+                                        <strong>17,090원<span>59%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+
+                    </div><!-- list end -->
+                    <div class="list">
+                        <div class="item">
+                            <a href="sub/best.html">
+                                <img src="img/마녀공장/skin1.png" alt="">
+                                <div class="text">
+                                    <h4>[기획세트] 비피다 바이옴 앰플 토너 기획세트(토너 210mlX2+100ml)</h4>
+                                    <div>
+                                        <p>35,700원</p>
+                                        <strong>25,500원<span>29%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/skin2.png" alt="">
+                                <div class="text">
+                                    <h4>[대용량] 비피다 바이옴 앰플 토너 500ml</h4>
+                                    <div>
+                                        <p>30,000원</p>
+                                        <strong>
+                                            14,000원<span>53%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/skin3.png" alt="">
+                                <div class="text">
+                                    <h4>갈락토미 클리어스킨 토너 210ml</h4>
+                                    <div>
+                                        <p>29,000원</p>
+                                        <strong>12,290원<span>58%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/skin4.png" alt="">
+                                <div class="text">
+                                    <h4>갈락토미 클리어스킨 패드 60매</h4>
+                                    <div>
+                                        <p>22,000원</p>
+                                        <strong>10,160원<span>54%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+
+                    </div><!-- list end -->
+
+
+                    <div class="list">
+                        <div class="item">
+                            <a href="sub/best.html">
+                                <img src="img/마녀공장/essence1.png" alt="">
+                                <div class="text">
+                                    <h4>히더 카밍 에센스 50ml</h4>
+                                    <div>
+                                        <p>32,000원</p>
+                                        <strong>16,570원<span>48%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/essence2.png" alt="">
+                                <div class="text">
+                                    <h4>마이크로 히알루로닉 에센스 50ml</h4>
+                                    <div>
+                                        <p>32,000원</p>
+                                        <strong>22,400원<span>30%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/essence3.png" alt="">
+                                <div class="text">
+                                    <h4>[대용량] 비피다 바이옴 콤플렉스 앰플 80ml</h4>
+                                    <div>
+                                        <p>49,000원</p>
+                                        <strong>25,000원<span>49%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/essence4.png" alt="">
+                                <div class="text">
+                                    <h4>비피다 시카 허브 세럼 50ml</h4>
+                                    <div>
+                                        <p>25,000원 </p>
+                                        <strong>12,670원<span>40%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+
+                    </div><!-- list end -->
+                    <div class="list">
+                        <div class="item">
+                            <a href="sub/best.html">
+                                <img src="img/마녀공장/cream1.png" alt="">
+                                <div class="text">
+                                    <h4>비피다 바이옴 아쿠아 베리어 크림 80ml</h4>
+                                    <div>
+                                        <p>24,500원</p>
+                                        <strong>9,830원<span>60%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/cream2.png" alt="">
+                                <div class="text">
+                                    <h4>갈락토미 에센스 크림 50ml</h4>
+                                    <div>
+                                        <p>35,000원</p>
+                                        <strong>
+                                            17,500원<span>50%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/cream3.png" alt="">
+                                <div class="text">
+                                    <h4>판테토인 크림 80ml</h4>
+                                    <div>
+                                        <p>42,000원</p>
+                                        <strong>19,840원<span>53%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/cream4.png" alt="">
+                                <div class="text">
+                                    <h4>갈락토미 모이스처 로션 100ml</h4>
+                                    <div>
+                                        <p>20,000원</p>
+                                        <strong>10,250원<span>49%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+
+                    </div><!-- list end -->
+                    <div class="list">
+                        <div class="item">
+                            <a href="sub/best.html">
+                                <img src="img/마녀공장/mask4.png" alt="">
+                                <div class="text">
+                                    <h4>하루하나 히알루론산 젤리 마스크</h4>
+                                    <div>
+                                        <p>42,000원</p>
+                                        <strong>21,670원<span>48%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/mask1.png" alt="">
+                                <div class="text">
+                                    <h4>아워 비건 어성초 시카 마스크 10매</h4>
+                                    <div>
+                                        <p>30,000원</p>
+                                        <strong>
+                                            12,320원<span>59%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/mask2.png" alt="">
+                                <div class="text">
+                                    <h4>갈락 나이아신 에센스 마스크 20매</h4>
+                                    <div>
+                                        <p>60,000원</p>
+                                        <strong>22,600원<span>62%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/mask3.png" alt="">
+                                <div class="text">
+                                    <h4>비피다 바이옴 앰플 마스크 10매</h4>
+                                    <div>
+                                        <p>30,000원</p>
+                                        <strong>11,850원<span>61%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+
+                    </div><!-- list end -->
+                    <div class="list">
+                        <div class="item">
+                            <a href="sub/best.html">
+                                <img src="img/마녀공장/body1.png" alt="">
+                                <div class="text">
+                                    <h4>알로에 수딩 로션 150ml</h4>
+                                    <div>
+                                        <p>25,000원</p>
+                                        <strong>11,460원<span>54%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/body2.png" alt="">
+                                <div class="text">
+                                    <h4>바닐라부티크 허그 퍼퓸 바디로션 150ml</h4>
+                                    <div>
+                                        <p>20,000원</p>
+                                        <strong>
+                                            10,000원<span>50%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/body3.png" alt="">
+                                <div class="text">
+                                    <h4>알로에 수딩 젤 300ml</h4>
+                                    <div>
+                                        <p>25,000원</p>
+                                        <strong>11,470원<span>54%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/body4.png" alt="">
+                                <div class="text">
+                                    <h4>허브그린 샴푸 510ml</h4>
+                                    <div>
+                                        <p>25,000원</p>
+                                        <strong>14,000원<span>44%</span></strong>
+                                    </div>
+                                </div><!-- text end -->
+                            </a>
+                        </div><!-- item end -->
+
+                    </div><!-- list end -->
+
+                </div><!-- inner end -->
+            </section><!-- best end -->
+
+            <section class="brand">
+                <div class="inner">
+                    <div class="title">
+                        <div>
+                            <h3>brand :</h3>
+                            <p>마녀공장을 만나는 순간<br> 시작되는 새로운 당신.</p>
+                        </div>
+                        <a href="#">전체보기</a>
+                    </div><!-- title end -->
+                    <div class="list">
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/brand01.jpg" alt="">
+                                <div>
+                                    <h4>about ma:nyo</h4>
+                                    <p>브랜드 스토리</p>
+                                </div>
+                            </a>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <a href="#">
+                                <img src="img/마녀공장/brand02.jpg" alt="">
+                                <div>
+                                    <h4>of ma:nyo</h4>
+                                    <p>성분 철학</p>
+                                </div>
+                            </a>
+                        </div><!-- item end -->
+                    </div><!-- list end -->
+                </div><!-- inner end -->
+            </section><!-- brand end -->
+
+        </main>
+        <footer>
+            <p>COPYRIGHT © MANYOFACTORY ALL RIGHTS RESERVED.</p>
+        </footer>
+    </div><!-- wrap end -->
+</body>
+
+</html>
